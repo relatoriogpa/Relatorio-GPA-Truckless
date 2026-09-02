@@ -224,16 +224,26 @@ function gerar(isClick=false){
   const obs=val('observacoes');
 
   const texto=
-`RELATÓRIO DE ATIVIDADE GPA TRUCKLESS B
-Data: ${val('data')}
-Local: ${val('sistema')}
-Equipamento: ${val('equipamento')}
-Falha: ${val('falha')}
-OM: ${val('om')}
-Horário Inicial: ${val('horaInicio')}
-Horário Final: ${val('horaFim')}
-Duração: ${duracao}
-Executantes: ${executantesSelecionados()}
+`*RELATÓRIO DE ATIVIDADE GPA TRUCKLESS B*
+
+*Data:* ${val('data')}
+*Local:* ${val('sistema')}
+*Equipamento:* ${val('equipamento')}
+*Falha:* ${val('falha')}
+*OM:* ${val('om')}
+*Horário Inicial:* ${val('horaInicio')}
+*Horário Final:* ${val('horaFim')}
+*Duração:* ${duracao}
+*Executantes:* ${executantesSelecionados()}
+
+*Descrição da Ocorrência:*
+${val('ocorrencia')}
+
+*Ações Realizadas:*
+${val('acao')}
+
+${obs ? `*Observações:*
+${obs}` : ''}`;
 
 Descrição da Ocorrência:
 ${val('ocorrencia')}
